@@ -8,12 +8,12 @@
 %define		pypi_name	repomd
 Summary:	Library for reading dnf/yum repositories
 Name:		python3-%{pypi_name}
-Version:	0.1.0
-Release:	0.1
+Version:	0.2.1
+Release:	1
 License:	MIT
 Group:		Libraries/Python
 Source0:	https://files.pythonhosted.org/packages/source/r/%{pypi_name}/%{pypi_name}-%{version}.tar.gz
-# Source0-md5:	f781a03ba41afb662843aca196a221ea
+# Source0-md5:	3979bcf59644ead9fb3324fe36d183ed
 URL:		https://github.com/carlwgeorge/repomd
 BuildRequires:	python3-modules
 BuildRequires:	python3-setuptools >= 38.6.0

@@ -9,7 +9,7 @@
 Summary:	Library for reading dnf/yum repositories
 Name:		python3-%{pypi_name}
 Version:	0.2.1
-Release:	2
+Release:	3
 License:	MIT
 Group:		Libraries/Python
 Source0:	https://files.pythonhosted.org/packages/source/r/%{pypi_name}/%{pypi_name}-%{version}.tar.gz

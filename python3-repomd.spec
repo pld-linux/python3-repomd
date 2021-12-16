@@ -16,7 +16,7 @@ Source0:	https://files.pythonhosted.org/packages/source/r/%{pypi_name}/%{pypi_na
 # Source0-md5:	3979bcf59644ead9fb3324fe36d183ed
 URL:		https://github.com/carlwgeorge/repomd
 BuildRequires:	python3-modules
-BuildRequires:	python3-setuptools >= 38.6.0
+BuildRequires:	python3-setuptools >= 1:38.6.0
 %if %{with tests}
 BuildRequires:	python3-lxml
 BuildRequires:	python3-pytest

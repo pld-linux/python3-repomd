@@ -9,7 +9,7 @@ Summary:	Library for reading dnf/yum repositories
 Summary(pl.UTF-8):	Biblioteka do odczytu repozytoriów dnf/yum
 Name:		python3-%{pypi_name}
 Version:	0.2.1
-Release:	4
+Release:	5
 License:	MIT
 Group:		Libraries/Python
 Source0:	https://files.pythonhosted.org/packages/source/r/repomd/%{pypi_name}-%{version}.tar.gz

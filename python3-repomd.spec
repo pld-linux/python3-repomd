@@ -9,7 +9,7 @@ Summary:	Library for reading dnf/yum repositories
 Summary(pl.UTF-8):	Biblioteka do odczytu repozytoriów dnf/yum
 Name:		python3-%{pypi_name}
 Version:	0.2.1
-Release:	7
+Release:	8
 License:	MIT
 Group:		Libraries/Python
 Source0:	https://files.pythonhosted.org/packages/source/r/repomd/%{pypi_name}-%{version}.tar.gz
@@ -38,7 +38,14 @@ pobierania informacji z repozytoriów dnf/yum.
 %setup -q -n %{pypi_name}-%{version}
 
 %build
-%py3_build %{?with_tests:test}
+%py3_build
+
+%if %{with tests}
+# use explicit plugins list for reliable builds (delete PYTEST_PLUGINS if empty)
+PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 \
+PYTEST_PLUGINS=pytest_cov,flake8 \
+%{__python3} -m pytest -o pythonpath="$PWD/build-3/lib" tests
+%endif
 
 %install
 rm -rf $RPM_BUILD_ROOT
